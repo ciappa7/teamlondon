@@ -1,1 +1,174 @@
 
+use strict;
+use warnings;
+
+my $setQ; 
+my $respond1;
+my $respond2;
+my $respond3;
+my $respond4;
+my $respond5;
+my $flag = 0;
+my $mainFlag = 0;
+my $exitFlag = 0;
+my $programFlag = 0;
+
+print "Welcome please pick the corresponding number with the selection you wish to choose press 9 to exit\n";
+while ($programFlag == 0) {
+	while ($mainFlag == 0) {
+		print "Would you like to pick quesiton set 1,2 or 3? (press any of those numbers to continue)\n";
+		$setQ = <STDIN>;
+		chomp $setQ;
+		if ($setQ == 9) {
+			exit;
+		}
+		if ($setQ == 1 || $setQ == 2 || $setQ == 3){
+			$mainFlag = 1;
+		}
+		$flag = 0;
+			if ($setQ == 1) {
+				while ($flag == 0) {
+				print "What is the\n";
+				print "0. Most safe\n";
+				print "1. least safe\n";
+				$respond1 = <STDIN>;
+				chomp $respond1;
+					if ($respond1 == 1 || $respond1 == 0) {
+						$flag = 1;
+					}
+				}
+				$flag = 0;
+				while ($flag == 0) {
+					print "0. Province\n";
+					print "1. City\n";
+					$respond2 = <STDIN>;
+					chomp $respond2;
+					if ($respond2 == 1 || $respond2 == 0) {
+						$flag = 1;
+					}
+				}
+				$flag = 0;
+				print "to\n";
+				while ($flag == 0) {
+					print "0. Raise a child\n";
+					print "1. Drive\n"; 
+					print "2. Live\n";
+					print "3. Start a business\n";
+					print "4. Own a home\n";
+					$respond3 = <STDIN>;
+					chomp $respond3;
+					if ($respond3 == 1 || $respond3 == 2 || $respond3 == 3 || $respond3 == 4 || $respond3 == 0) {
+						$flag = 1;
+					}
+				}
+				$flag = 0; 
+					#year
+			} 
+			elsif ($setQ == 2) {
+			print "\nWhat\n";
+			while ($flag == 0) {
+				print "0. Province\n";
+				print "1. City\n";
+				$respond1 = <STDIN>;
+				chomp $respond1;
+				if ($respond1 == 1 || $respond1 == 0) {
+					$flag = 1;
+				}
+			}
+			$flag = 0;
+			print "had the\n";
+			while ($flag == 0) { 
+				print "0. Highest\n";
+				print "1. Lowest\n";
+				$respond2 = <STDIN>;
+				chomp $respond2;
+				if ($respond2 == 1 || $respond2 == 0) {
+					$flag = 1;
+				}
+			}
+			$flag = 0;
+			print "rate (per 100000 population) of\n";
+			while ($flag == 0){
+				print "4. Total violent Criminal Code violations\n";
+				print "17. Total sexual violations against children\n";
+				print "21. Luring a child\n";
+				print "34. Total robbery\n";
+				print "39. Abduction under the age of 14, not parent or gaurdian\n";
+				print "65. Total breaking and entering\n";
+				print "79. Shoplifiting (5,000 dollars or under)\n";
+				print "84. Arson\n";
+				print "128. Participate in activity of terrorist group\n";
+				print "148. Total Criminal Code traffic violations\n";
+				print "149. Total impaired driving\n";
+				print "161. Dangerous vehicle operation, causing death\n";
+				$respond3 = <STDIN>;
+				chomp $respond3;
+				if ($respond3 == 39 || $respond3 == 84 || $respond3 == 161 || $respond3 == 21 || $respond3 == 128 || $respond3 == 65 || $respond3 == 148 || $respond3 == 149 || $respond3 == 34 || $respond3 == 4 || $respond3 == 79 || $respond3 == 17) {
+					$flag = 1;
+				}
+			}
+			$flag = 0;
+			while ($flag == 0) {
+				print "Please pick a number from 1998 to 2015\n";
+				$respond4 = <STDIN>;
+				chomp $respond4;
+				if ($respond4 >= 1998 && $respond4 <= 2015) {
+					$flag = 1;
+				}
+			}   
+			$flag = 0;
+			
+		print "\n response 1 = $respond1\n";
+		print "\n response 2 = $respond2\n";
+		print "\n response 3 = $respond3\n";
+		print "\n response 4 = $respond4\n";
+		     
+		} elsif ($setQ == 3) {
+			print "\nWhat\n";
+			while ($flag == 0) {
+				print "0. Province\n";
+				print "1. City\n";
+				$respond1 = <STDIN>;
+				chomp $respond1;
+				if ($respond1 == 1 || $respond1 == 0) {
+					$flag = 1;
+				}
+			}
+			$flag = 0;
+			print "had the\n";
+			while ($flag == 0) {
+				print ("0. Highest\n");
+				print ("1. Lowest\n");
+				$respond2 = <STDIN>;
+				chomp $respond2;
+				if ($respond2 == 1 || $respond2 == 0) {
+					$flag = 1;
+				}
+			}
+			$flag = 0;
+			print "percent change in\n"; 
+			while ($flag == 0){
+				print "4. Total violent Criminal Code violations\n";
+				print "17. Total sexual violations against children\n";
+				print "21. Luring a child\n";
+				print "34. Total robbery\n";
+				print "39. Abduction under the age of 14, not parent or gaurdian\n";
+				print "65. Total breaking and entering\n";
+				print "79. Shoplifiting (5,000 dollars or under)\n";
+				print "84. Arson\n";
+				print "128. Participate in activity of terrorist group\n";
+				print "148. Total Criminal Code traffic violations\n";
+				print "149. Total impaired driving\n";
+				print "161. Dangerous vehicle operation, causing death\n";
+            
+            	$respond3 = <STDIN>;
+            	chomp $respond3;
+            	if ($respond3 == 39 || $respond3 == 84 || $respond3 == 161 || $respond3 == 21 || $respond3 == 128 || $respond3 == 65 || $respond3 == 148 || $respond3 == 149 || $respond3 == 34 || $respond3 == 4 || $respond3 == 79 || $respond3 == 17) {
+                	$flag = 1;
+            	}
+        	}
+        	#year
+    	}
+    	$mainFlag = 0; 
+	}
+}
